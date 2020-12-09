@@ -1,7 +1,6 @@
 import tkinter as tk
 from tkinter import ttk
 from model.comprobadorCadenas import Regex
-from functools import partial
 def update_regex(new_regex, regex):
     print("method called")
     regex.set_regex(new_regex)
