@@ -10,6 +10,7 @@ class Popup(ttk.Frame, Regex):
         ttk.Frame.__init__(self, master)
         application_window = tk.Toplevel()
         application_window.wm_title("Nueva ReGex")
+        application_window.geometry("400x100")
 
         display_label = tk.Label(application_window, text="Nuevo ReGex")
         display_label.pack()
