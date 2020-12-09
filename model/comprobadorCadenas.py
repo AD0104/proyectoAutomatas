@@ -10,8 +10,7 @@ class Regex:
         self.regex = new_regex
 
     def get_regex(self):
-        #return self.regex
         print(self.regex)
-
+        return self.regex
     def verify_text(self, text):
         return re.search(self.regex,text)
