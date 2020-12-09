@@ -1,11 +1,15 @@
 import tkinter
+from model.comprobadorCadenas import Regex
+
 #Creates the window where all the widgets will be displayed.
 main_window = tkinter.Tk()
 main_window.geometry("700x400")
 main_window.resizable(False,False)
 
+regex = Regex()
+
 menu_bar = tkinter.Menu(main_window)
-menu_bar.add_command(label="Mostrar ReGex", command=lambda: print("regex"))
+menu_bar.add_command(label="Mostrar ReGex", command=regex.get_regex)
 menu_bar.add_command(label="Reasignar ReGex", command=lambda: print("set regex"))
 
 #creation of an object with different color for the background and foreground
@@ -17,6 +21,7 @@ display_label.pack(fill="x")
 #Sets the entry area to fill the full width of the window where's been displayed
 text_entry_area.pack(fill=tkinter.X)
 submit_button.pack()
+
 
 main_window.config(menu=menu_bar)
 main_window.mainloop()

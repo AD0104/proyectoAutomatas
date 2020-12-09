@@ -1,7 +1,7 @@
 import re
 class Regex:
     #Global variable to set the regex
-    regex = "" 
+    regex = "^[a|b|c][c][a]+$" 
     def __init__(self):
         print("created object")
 
@@ -10,15 +10,8 @@ class Regex:
         self.regex = new_regex
 
     def get_regex(self):
-        return self.regex
+        #return self.regex
+        print(self.regex)
 
     def verify_text(self, text):
-        return re.search("^[a|b|c][c][a]+$",text)
-r = Regex()
-print(r.get_regex())
-r.set_regex("new regex")
-print(r.get_regex())
-if r.verify_text("acaaaa"):
-    print("match found")
-else:
-    print("no match found")
+        return re.search(self.regex,text)
