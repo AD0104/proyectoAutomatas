@@ -2,10 +2,18 @@ import tkinter
 from tkinter import messagebox
 from model.comprobadorCadenas import Regex
 from view.newRegex import Popup
+from view.stringVerificator import Verification
+from view.showRegex import Show
+
 def showRegex():
-    messagebox.showinfo(message=regex.get_regex(), title="Expresión regular actual")
+    #messagebox.showinfo(message=regex.get_regex(), title="Expresión regular actual")
+    popup = Show(main_window, regex)    
+    popup.mainloop()
 def showPopup():
     popup = Popup(main_window, regex)
+    popup.mainloop()
+def showVerif():
+    popup = Verification(main_window, text_entry_area.get(), regex)
     popup.mainloop()
 #Creates the window where all the widgets will be displayed.
 main_window = tkinter.Tk()
@@ -23,7 +31,7 @@ display_label = tkinter.Label(main_window, text="Ingresa la cadena a verificar",
 
 text_entry_area = tkinter.Entry(main_window)
 
-submit_button = tkinter.Button(main_window,text="Verificar")
+submit_button = tkinter.Button(main_window,text="Verificar", command=showVerif)
 
 display_label.pack(fill="x")
 #Sets the entry area to fill the full width of the window where's been displayed
