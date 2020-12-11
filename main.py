@@ -17,6 +17,7 @@ def showVerif():
     popup.mainloop()
 #Creates the window where all the widgets will be displayed.
 main_window = tkinter.Tk()
+main_window.title("Verificador de cadenas")
 main_window.geometry("700x400")
 main_window.resizable(False,False)
 

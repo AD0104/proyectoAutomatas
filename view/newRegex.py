@@ -2,7 +2,6 @@ import tkinter as tk
 from tkinter import ttk
 from model.comprobadorCadenas import Regex
 def update_regex(new_regex, regex, application_window):
-    print("method called")
     regex.set_regex(new_regex)
     application_window.destroy()
 class Popup(ttk.Frame, Regex):

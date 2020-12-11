@@ -4,13 +4,9 @@ class Regex:
     regex = "^[a|b|c][c][a]+$" 
     def __init__(self):
         print("created object")
-
     def set_regex(self,new_regex):
-        #with self.var_name we call the global variable.
         self.regex = new_regex
-
     def get_regex(self):
-        print(self.regex)
         return self.regex
     def verify_text(self, text):
         return re.search(self.regex,text)
